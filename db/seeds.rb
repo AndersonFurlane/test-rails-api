@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+(1..4).map{|n| User.create(name: "User ${n}", email: "user_email_#{n}@gmail.com")}
+User.all.map { |u| puts "#{u.name}  /  #{u.api_key}" }
